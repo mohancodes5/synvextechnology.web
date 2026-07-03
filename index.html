@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Synvex Technology builds modern, premium, scalable, and high-performance websites and web applications tailored to your business needs.">
+  <meta name="keywords" content="web development, custom applications, e-commerce, UX UI design, website maintenance, Synvex, software company">
+  <meta name="author" content="Synvex Technology">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://synvextechnology.com/">
+  <meta property="og:title" content="Synvex Technology - Modern Web Design & Software Solutions">
+  <meta property="og:description" content="Transforming ideas into powerful websites & web applications. Discover our services from custom development to UI/UX design.">
+  <meta property="og:image" content="https://synvextechnology.com/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Synvex Technology - Modern Web Design & Software Solutions">
+  <meta property="twitter:description" content="Transforming ideas into powerful websites & web applications. Discover our services from custom development to UI/UX design.">
+
+  <title>Synvex Technology | Transforming Ideas Into Digital Realities</title>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" role="status" aria-label="Loading page">
+    <div class="loader-logo">Synvex<span>technology</span><div class="logo-dot"></div></div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Synvex Technology Homepage">
+        Synvex<span>technology</span>
+        <div class="logo-dot"></div>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark and light theme" title="Switch Theme">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.85rem; display: none;">Get a Quote</a>
+
+        <!-- Burger Toggle (Mobile) -->
+        <button class="burger-menu" id="burger-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open main navigation menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-left">
+        <div class="hero-tag">
+          <span class="hero-tag-pulse"></span>
+          Next-Gen Software Partner
+        </div>
+        <h1 class="hero-title">
+          Transforming Ideas Into <span>Powerful Websites</span> & Web Applications
+        </h1>
+        <p class="hero-description">
+          We build modern, scalable, and high-performance websites and web applications tailored to your business needs. Empower your startup or enterprise with clean, custom-coded code.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">
+            Get Started <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Contact Us <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-graphic reveal-right">
+        <div class="graphic-bg-glow"></div>
+        <!-- Coding SVG Terminal Mockup -->
+        <div class="terminal-mockup">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">synvex-app.js</div>
+          </div>
+          <div class="terminal-body">
+            <code><span class="line-num">1</span><span class="t-keyword">const</span> <span class="t-val">synvex</span> = <span class="t-keyword">require</span>(<span class="t-val">'synvex-technology'</span>);</code>
+            <code><span class="line-num">2</span><span class="t-keyword">const</span> <span class="t-val">idea</span> = <span class="t-keyword">new</span> <span class="t-val">synvex.ClientIdea</span>();</code>
+            <code><span class="line-num">3</span></code>
+            <code><span class="line-num">4</span><span class="t-comment">// Transforming dreams into scalable applications</span></code>
+            <code><span class="line-num">5</span><span class="t-val">synvex</span>.<span class="t-keyword">build</span>(<span>idea</span>)</code>
+            <code><span class="line-num">6</span>  .<span class="t-keyword">then</span>((<span>app</span>) => {</code>
+            <code><span class="line-num">7</span>    <span>app</span>.<span class="t-keyword">deploy</span>({</code>
+            <code><span class="line-num">8</span>      <span class="t-attr">performance</span>: <span class="t-val">'100%'</span>,</code>
+            <code><span class="line-num">9</span>      <span class="t-attr">design</span>: <span class="t-val">'Premium & Mobile-First'</span>,</code>
+            <code><span class="line-num">10</span>      <span class="t-attr">scalability</span>: <span class="t-val">'Enterprise'</span></code>
+            <code><span class="line-num">11</span>    });</code>
+            <code><span class="line-num">12</span>  })</code>
+            <code><span class="line-num">13</span>  .<span class="t-keyword">catch</span>((<span>err</span>) => <span class="t-val">console</span>.<span class="t-keyword">error</span>(<span>err</span>));</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section about">
+    <div class="container about-grid">
+      <div class="about-img-wrapper reveal-left">
+        <div class="about-img-box">
+          <!-- Geometric Code Grid Graphic -->
+          <svg viewBox="0 0 400 400" width="100%" height="100%" style="opacity: 0.85;">
+            <defs>
+              <linearGradient id="svg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00f2fe" />
+                <stop offset="100%" stop-color="#4facfe" />
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="160" stroke="url(#svg-grad)" stroke-width="2" fill="none" stroke-dasharray="10 5" />
+            <circle cx="200" cy="200" r="120" stroke="var(--border-glass)" stroke-width="1.5" fill="none" />
+            <path d="M 200,80 L 200,320 M 80,200 L 320,200" stroke="var(--border-glass)" stroke-width="1" />
+            <rect x="150" y="150" width="100" height="100" rx="15" fill="var(--bg-glass-card)" stroke="url(#svg-grad)" stroke-width="2.5" />
+            <path d="M 180,185 L 220,185 M 180,200 L 210,200 M 180,215 L 200,215" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <div class="about-info-badge">
+            <i class="fa-solid fa-code"></i>
+            <div class="about-info-text">
+              <h4>Modern Architecture</h4>
+              <p>Tailored Clean Coding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <span class="section-tag">About Our Startup</span>
+        <h2 class="section-title">Who We Are At <span>Synvex</span></h2>
+        <p>
+          Synvex technology is a passionate software engineering startup dedicated to helping brands grow with state-of-the-art web products. We fuse visually striking, high-fidelity layouts with clean structural architecture to build applications that load fast and rank well.
+        </p>
+        <p>
+          Our commitment extends beyond just launching websites. We aim for long-term customer success and engineering quality, ensuring every codebase we produce remains scalable, maintainable, and robust against modern security challenges.
+        </p>
+        
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num" data-val="100">0<span>%</span></div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-val="24">0<span>/7</span></div>
+            <div class="stat-label">Engineering Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Core Offerings</span>
+        <h2 class="section-title">Expert <span>Software Services</span> We Deliver</h2>
+        <p class="section-subtitle">We design and develop products that capture attention, engage users, and build digital value for businesses of all scales.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Website Development</h3>
+          <p>Beautiful, feature-rich custom corporate landing pages and portfolio sites optimized for speed, design alignment, and SEO guidelines.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>Web Application Development</h3>
+          <p>High-end interactive web portals, content management hubs, SaaS solutions, and secure client-side business dashboard designs.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h3>E-Commerce Solutions</h3>
+          <p>Stunning electronic store platforms built for peak transactions, integrated payments, easy inventory checks, and product sliders.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3>Responsive Design</h3>
+          <p>Adaptive fluid web architecture ensuring smooth layouts across monitors, tablet screen sizes, laptops, and smart displays.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Immersive layout designs, user journey mappings, interactive high-fidelity wireframes, and beautiful brand visuals.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3>Website Maintenance</h3>
+          <p>Continuous system software upgrades, database security monitoring, load speed checks, and dedicated ongoing tech backing.</p>
+          <a href="#contact" class="service-learn">Get quote <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="section why-us">
+    <div class="container why-us-grid">
+      <div class="why-us-info reveal-left">
+        <span class="section-tag">Value Proposition</span>
+        <h2 class="section-title">Why Businesses Partner With <span>Synvex</span></h2>
+        <p>We work differently. By standardizing clean coding conventions, robust testing steps, and beautiful modern interfaces, we build software products that work flawlessly.</p>
+        <p>Our agile deployment processes let us launch products quickly without compromising security or design fidelity. Partner with us for a stress-free transition from idea to code.</p>
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+      </div>
+      <div class="why-us-cards">
+        <!-- Choice 1 -->
+        <div class="why-card reveal">
+          <i class="fa-solid fa-cube"></i>
+          <h4>Modern Technologies</h4>
+          <p>We leverage Next.js, React, Node.js, and Mongo systems for modular structures.</p>
+        </div>
+        <!-- Choice 2 -->
+        <div class="why-card reveal reveal-delay-1">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h4>Mobile-Friendly</h4>
+          <p>Every element scales fluidly across device types for mobile-first visitors.</p>
+        </div>
+        <!-- Choice 3 -->
+        <div class="why-card reveal">
+          <i class="fa-solid fa-bolt"></i>
+          <h4>Fast Delivery</h4>
+          <p>Agile planning strategies enable rapid, structured product releases.</p>
+        </div>
+        <!-- Choice 4 -->
+        <div class="why-card reveal reveal-delay-1">
+          <i class="fa-solid fa-code-branch"></i>
+          <h4>Clean Code</h4>
+          <p>Coded cleanly using modular functions for easy developer handover.</p>
+        </div>
+        <!-- Choice 5 -->
+        <div class="why-card reveal">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h4>Secure Solutions</h4>
+          <p>End-to-end data encryption safeguards user forms from injections.</p>
+        </div>
+        <!-- Choice 6 -->
+        <div class="why-card reveal reveal-delay-1">
+          <i class="fa-solid fa-headset"></i>
+          <h4>Ongoing Support</h4>
+          <p>We supply prompt troubleshooting and server health upgrades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Development Process Section -->
+  <section id="process" class="section process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Workflow</span>
+        <h2 class="section-title">Step-by-Step <span>Development Process</span></h2>
+        <p class="section-subtitle">How we transform your requirements into high-performance digital products, step by step.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>Requirement Analysis</h4>
+              <span class="step-num">01</span>
+            </div>
+            <p>We map requirements, project objectives, and user paths to build an engineering plan.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>Strategic Planning</h4>
+              <span class="step-num">02</span>
+            </div>
+            <p>Drafting project architectures, server setups, data layouts, and staging target timelines.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>UI/UX Prototyping</h4>
+              <span class="step-num">03</span>
+            </div>
+            <p>Creating high-fidelity layouts, styling components, and interactive responsive frames.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>Robust Coding</h4>
+              <span class="step-num">04</span>
+            </div>
+            <p>Developing using modular clean components, SEO metadata schemas, and fast loading methods.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>Comprehensive Testing</h4>
+              <span class="step-num">05</span>
+            </div>
+            <p>Running functional checks, form data validation, speed checks, and responsiveness testing.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="process-step">
+              <h4>Secure Deployment</h4>
+              <span class="step-num">06</span>
+            </div>
+            <p>Publishing code live, configuring SSL certificates, checking analytics tracking tags, and handovers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="section technologies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Modern <span>Technologies We Use</span></h2>
+        <p class="section-subtitle">We employ state-of-the-art tools and languages to deliver responsive and feature-rich layouts.</p>
+      </div>
+
+      <div class="tech-grid reveal">
+        <div class="tech-badge">
+          <i class="fa-brands fa-html5 html-col"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-css3-alt css-col"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-js js-col"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-react react-col"></i>
+          <span>React</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-envira next-col"></i>
+          <span>Next.js</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-node-js node-col"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-python python-col"></i>
+          <span>Python</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-solid fa-database mysql-col"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-solid fa-leaf mongo-col"></i>
+          <span>MongoDB</span>
+        </div>
+        <div class="tech-badge">
+          <i class="fa-brands fa-github git-col"></i>
+          <span>GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Have Questions?</span>
+        <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+        <p class="section-subtitle">Find immediate answers to our design approaches, delivery timelines, and project handovers.</p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-1">
+            <h4>What services does Synvex technology provide?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-1">
+            <div class="faq-body-content">
+              We specialize in Custom Website Development, Web Application Development, Responsive Web Design, E-Commerce Solutions, UI/UX Prototyping, and Ongoing Website Support & Maintenance.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-2">
+            <h4>How long does it take to build a custom landing page?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-2">
+            <div class="faq-body-content">
+              A standard single-page landing website takes about 1-2 weeks. Complex platforms requiring databases, API routing, and CMS systems generally take 3-6 weeks, depending on requirements.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-3">
+            <h4>Are all the websites mobile-friendly and search engine friendly?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-3">
+            <div class="faq-body-content">
+              Yes, absolutely. We use a mobile-first responsive grid system and adhere strictly to search engine crawl rules by embedding semantic tags, custom meta tags, and schema layouts.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-4">
+            <h4>Do you provide maintenance and code updates after launch?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-4">
+            <div class="faq-body-content">
+              Yes, we support our projects with dedicated post-launch support programs. This covers cloud system updates, database health metrics, security audits, and content updates.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-5">
+            <h4>Can we migrate our existing WordPress site to modern frameworks?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-5">
+            <div class="faq-body-content">
+              Yes, we frequently port legacy architectures (WordPress, old HTML files) into high-speed Next.js or React platforms using headless configurations to optimize core web vitals.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item reveal" role="region">
+          <button class="faq-header" aria-expanded="false" aria-controls="faq-body-6">
+            <h4>What is your pricing structure for custom development?</h4>
+            <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-body" id="faq-body-6">
+            <div class="faq-body-content">
+              Our projects are priced based on complexity, scope, and specific features. We offer fixed pricing structures for landing pages, and milestone-based schedules for larger web applications.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      
+      <div class="contact-details reveal-left">
+        <span class="section-tag">Connect with Us</span>
+        <h2 class="section-title">Let's Create Something <span>Exceptional</span></h2>
+        
+        <div class="contact-card">
+          <h3 class="contact-info-title">Talk to our Engineers</h3>
+          <p class="contact-info-desc">Fill out our submission form or send a message directly. We usually respond in under 24 hours.</p>
+          
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon-box"><i class="fa-regular fa-envelope"></i></div>
+              <div class="contact-text-box">
+                <h5>Email Us</h5>
+                <p><a href="mailto:mohancodes5@gmail.com">mohancodes5@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text-box">
+                <h5>Call Support</h5>
+                <p><a href="tel:+919384401306">+91 9384401306</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text-box">
+                <h5>Headquarters</h5>
+                <p>Tamil Nadu, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal-right">
+        <!-- FormSubmit POST target -->
+        <form action="https://formsubmit.co/mohancodes5@gmail.com" method="POST" id="inquiry-form" novalidate>
+          
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Website Inquiry">
+          <input type="hidden" name="_next" value="thank-you.html">
+
+          <div class="form-success-msg" id="form-success">
+            Thank you! Your message was submitted successfully.
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full Name *</label>
+            <input class="form-input" type="text" id="full-name" name="name" placeholder="John Doe" required>
+            <span class="form-error" id="name-error">Please enter your full name.</span>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label class="form-label" for="email-addr">Email Address *</label>
+              <input class="form-input" type="email" id="email-addr" name="email" placeholder="john@example.com" required>
+              <span class="form-error" id="email-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone-num">Phone Number *</label>
+              <input class="form-input" type="tel" id="phone-num" name="phone" placeholder="+91 XXXXX XXXXX" required>
+              <span class="form-error" id="phone-error">Please enter a valid phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="project-type">Project Type *</label>
+            <select class="form-input" id="project-type" name="project_type" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Website Development">Custom Website Development</option>
+              <option value="Web Application Development">Web Application Development</option>
+              <option value="E-Commerce Solutions">E-Commerce Development</option>
+              <option value="UI/UX Prototyping">UI/UX Design</option>
+              <option value="Site Maintenance">Support & Maintenance</option>
+              <option value="Custom Business Solutions">Custom Business Solutions</option>
+            </select>
+            <span class="form-error" id="project-error">Please choose a project type.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Project Description *</label>
+            <textarea class="form-input" id="message" name="message" rows="4" placeholder="Tell us about your project requirements, goals, and targets..." required></textarea>
+            <span class="form-error" id="message-error">Description must be at least 15 characters long.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; border-radius: 8px;">
+            Send Inquiry <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h4>Synvex<span>technology</span></h4>
+        <p>A high-performance startup software engineering company building user-centric websites and web applications.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook Link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter/X Link"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com" class="social-link" target="_blank" aria-label="GitHub Profile Link"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Website Development</a></li>
+          <li><a href="#services">Web App Coding</a></li>
+          <li><a href="#services">E-Commerce Shops</a></li>
+          <li><a href="#services">UI/UX Layouts</a></li>
+          <li><a href="#services">System Backing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact Info</h5>
+        <div class="footer-info">
+          <div class="footer-info-item">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:mohancodes5@gmail.com">mohancodes5@gmail.com</a>
+          </div>
+          <div class="footer-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919384401306">+91 9384401306</a>
+          </div>
+          <div class="footer-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Tamil Nadu, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Synvex technology. All Rights Reserved.</p>
+      <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444; margin: 0 2px;"></i> for Next-Gen Web</p>
+    </div>
+  </footer>
+
+  <!-- Script Link -->
+  <script src="main.js"></script>
+</body>
+</html>
