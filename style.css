@@ -1417,6 +1417,44 @@ select.form-input {
   }
 }
 
+.whatsapp-float {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 4px;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+    left: 1rem;
+    bottom: 1rem;
+    width: 54px;
+    height: 54px;
+    font-size: 1.55rem;
+  }
+}
+
 /* --- Footer --- */
 footer {
   background: var(--bg-primary);
