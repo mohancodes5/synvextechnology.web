@@ -942,7 +942,6 @@ header:not(.scrolled) {
 .why-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-glass-hover);
-  background: rgba(18, 29, 54, 0.6);
 }
 
 .why-card i {
@@ -1166,8 +1165,23 @@ header:not(.scrolled) {
 }
 
 .faq-container {
-  max-width: 800px;
+  width: 100%;
+  max-width: var(--container-max-width);
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Make FAQ section stretch full width of the page while keeping inner content centered */
+.faq > .container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* Ensure card hover does not reduce child content visibility */
+.service-card:hover *, .why-card:hover * {
+  opacity: 1 !important;
+  color: inherit !important;
 }
 
 .faq-item {
