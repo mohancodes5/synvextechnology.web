@@ -1166,9 +1166,9 @@ header:not(.scrolled) {
 
 .faq-container {
   width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1.5rem;
 }
 
 /* Make FAQ section stretch full width of the page while keeping inner content centered */
