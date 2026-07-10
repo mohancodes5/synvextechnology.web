@@ -341,9 +341,9 @@ document.addEventListener('DOMContentLoaded', () => {
           firstError.focus();
         }
       } else {
-        // All validation passed - send the form through FormSubmit and then redirect to the thank-you page.
+        // All validation passed - submit to the PHP handler and then redirect to the thank-you page.
         const submitBtn = inquiryForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerHTML;
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
 
         if (submitBtn) {
           submitBtn.disabled = true;
@@ -351,33 +351,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const formData = new FormData(inquiryForm);
-        const payload = Object.fromEntries(formData.entries());
 
-        fetch('https://formsubmit.co/ajax/synvextechnology@gmail.com', {
+        fetch('contact.php', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            ...payload,
-            _subject: 'New Website Inquiry from Synvex Technology',
-            _template: 'table',
-            _captcha: 'false'
-          })
+          body: formData
         })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Form delivery failed');
+        .then(async (response) => {
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || data.success === false) {
+            throw new Error(data.message || 'Form delivery failed');
           }
           window.location.href = 'thank-you.html';
         })
         .catch((error) => {
           console.error('Form submission error:', error);
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-          }
+          const name = encodeURIComponent(nameInput.value.trim());
+          const email = encodeURIComponent(emailInput.value.trim());
+          const phone = encodeURIComponent(phoneInput.value.trim());
+          const projectType = encodeURIComponent(projectInput.value);
+          const message = encodeURIComponent(messageInput.value.trim());
+          const mailtoLink = `mailto:synvextechnology@gmail.com?subject=${encodeURIComponent('New Website Inquiry from Synvex Technology')}&body=${encodeURIComponent(`Name: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\nPhone: ${phoneInput.value.trim()}\nProject Type: ${projectInput.value}\n\nMessage:\n${messageInput.value.trim()}`)}`;
+
+          window.location.href = mailtoLink;
           setTimeout(() => {
             window.location.href = 'thank-you.html';
           }, 1000);
