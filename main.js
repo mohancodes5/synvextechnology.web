@@ -341,8 +341,47 @@ document.addEventListener('DOMContentLoaded', () => {
           firstError.focus();
         }
       } else {
-        // All validation passed - submit the form normally so FormSubmit can deliver the email.
-        inquiryForm.submit();
+        // All validation passed - send the form through FormSubmit and then redirect to the thank-you page.
+        const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Sending...';
+        }
+
+        const formData = new FormData(inquiryForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        fetch('https://formsubmit.co/ajax/synvextechnology@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            ...payload,
+            _subject: 'New Website Inquiry from Synvex Technology',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Form delivery failed');
+          }
+          window.location.href = 'thank-you.html';
+        })
+        .catch((error) => {
+          console.error('Form submission error:', error);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+          setTimeout(() => {
+            window.location.href = 'thank-you.html';
+          }, 1000);
+        });
       }
     });
   }
