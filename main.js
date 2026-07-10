@@ -350,33 +350,14 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.innerHTML = 'Sending...';
         }
 
-        const formData = new FormData(inquiryForm);
+        // Submit the form normally to FormSubmit so it delivers the email and redirects
+        const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Sending...';
+        }
 
-        fetch('contact.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(async (response) => {
-          const data = await response.json().catch(() => ({}));
-          if (!response.ok || data.success === false) {
-            throw new Error(data.message || 'Form delivery failed');
-          }
-          window.location.href = 'thank-you.html';
-        })
-        .catch((error) => {
-          console.error('Form submission error:', error);
-          const name = encodeURIComponent(nameInput.value.trim());
-          const email = encodeURIComponent(emailInput.value.trim());
-          const phone = encodeURIComponent(phoneInput.value.trim());
-          const projectType = encodeURIComponent(projectInput.value);
-          const message = encodeURIComponent(messageInput.value.trim());
-          const mailtoLink = `mailto:synvextechnology@gmail.com?subject=${encodeURIComponent('New Website Inquiry from Synvex Technology')}&body=${encodeURIComponent(`Name: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\nPhone: ${phoneInput.value.trim()}\nProject Type: ${projectInput.value}\n\nMessage:\n${messageInput.value.trim()}`)}`;
-
-          window.location.href = mailtoLink;
-          setTimeout(() => {
-            window.location.href = 'thank-you.html';
-          }, 1000);
-        });
+        inquiryForm.submit();
       }
     });
   }
