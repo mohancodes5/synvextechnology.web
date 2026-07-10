@@ -341,24 +341,8 @@ document.addEventListener('DOMContentLoaded', () => {
           firstError.focus();
         }
       } else {
-        // All validation passed - submit form and redirect to thank you page
-        const formData = new FormData(inquiryForm);
-        
-        fetch(inquiryForm.action, {
-          method: 'POST',
-          body: formData
-        })
-        .then(() => {
-          // Redirect to thank you page after successful submission
-          window.location.href = 'thank-you.html';
-        })
-        .catch((error) => {
-          console.error('Form submission error:', error);
-          // Still redirect even if there's an error (form was sent)
-          setTimeout(() => {
-            window.location.href = 'thank-you.html';
-          }, 1000);
-        });
+        // All validation passed - submit the form normally so FormSubmit can deliver the email.
+        inquiryForm.submit();
       }
     });
   }
