@@ -4,7 +4,7 @@
   mobile burger toggle, FAQ accordion, scroll reveal observers, statistical counters, and form validation.
 */
 
-document.addEventListener('DOMContentLoaded', () => {
+const init = () => {
   const dismissPreloader = () => {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
@@ -367,4 +367,11 @@ document.addEventListener('DOMContentLoaded', () => {
     dismissPreloader();
   }
 
-});
+};
+
+// Ensure initialization runs even if the script is loaded after DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
