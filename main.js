@@ -341,17 +341,9 @@ const init = () => {
           firstError.focus();
         }
       } else {
-        // All validation passed - submit to the PHP handler and then redirect to the thank-you page.
+        // All validation passed - submit to FormSubmit so it delivers the email and redirects
         const submitBtn = inquiryForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
 
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = 'Sending...';
-        }
-
-        // Submit the form normally to FormSubmit so it delivers the email and redirects
-        const submitBtn = inquiryForm.querySelector('button[type="submit"]');
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.innerHTML = 'Sending...';
