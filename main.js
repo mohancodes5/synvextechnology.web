@@ -289,6 +289,12 @@ const init = () => {
   // Submit Handler
   if (inquiryForm) {
     inquiryForm.addEventListener('submit', (e) => {
+      if (window.location.protocol === 'file:') {
+        e.preventDefault();
+        alert('This contact form only works when the website is opened through a local web server. Please run the site with a server such as:\n\npython -m http.server 8000\n\nand open http://localhost:8000 in your browser.');
+        return;
+      }
+
       e.preventDefault();
       let hasError = false;
 
@@ -341,7 +347,7 @@ const init = () => {
           firstError.focus();
         }
       } else {
-        // All validation passed - submit to FormSubmit so it delivers the email and redirects
+        // All validation passed - submit via FormSubmit AJAX so the user sees the thank-you page instead of the browser warning.
         const submitBtn = inquiryForm.querySelector('button[type="submit"]');
 
         if (submitBtn) {
@@ -349,7 +355,29 @@ const init = () => {
           submitBtn.innerHTML = 'Sending...';
         }
 
-        inquiryForm.submit();
+        const payload = Object.fromEntries(new FormData(inquiryForm).entries());
+
+        fetch('https://formsubmit.co/ajax/info.synvextechnology@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('FormSubmit request failed');
+            }
+            return response.json().catch(() => ({}));
+          })
+          .then(() => {
+            window.location.href = 'thank-you.html';
+          })
+          .catch((error) => {
+            console.error('Form submission failed:', error);
+            window.location.href = 'thank-you.html';
+          });
       }
     });
   }
