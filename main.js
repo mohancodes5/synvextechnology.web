@@ -30,21 +30,15 @@ const init = () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const currentTheme = localStorage.getItem('theme');
 
-  // Set default preference if cached
-  if (currentTheme === 'light') {
-    document.documentElement.classList.add('light-theme');
+  // Restore the saved theme preference.
+  if (currentTheme === 'dark') {
+    document.documentElement.classList.add('dark-theme');
   }
 
   // Toggle Theme on Click
   themeToggleBtn.addEventListener('click', () => {
-    document.documentElement.classList.toggle('light-theme');
-    
-    // Save selection
-    let theme = 'dark';
-    if (document.documentElement.classList.contains('light-theme')) {
-      theme = 'light';
-    }
-    localStorage.setItem('theme', theme);
+    const isDarkTheme = document.documentElement.classList.toggle('dark-theme');
+    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
   });
 
 
