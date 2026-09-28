@@ -1233,10 +1233,16 @@ header:not(.scrolled) {
 }
 
 .faq-header {
+  width: 100%;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
   cursor: pointer;
   user-select: none;
 }
