@@ -135,33 +135,13 @@
         </div>
       </div>
       <div class="hero-graphic reveal-right">
-        <div class="graphic-bg-glow"></div>
-        <!-- Coding SVG Terminal Mockup -->
-        <div class="terminal-mockup">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-            </div>
-            <div class="terminal-title">synvex-app.js</div>
-          </div>
-          <div class="terminal-body">
-            <code><span class="line-num">1</span><span class="t-keyword">const</span> <span class="t-val">synvex</span> = <span class="t-keyword">require</span>(<span class="t-val">'synvex-technology'</span>);</code>
-            <code><span class="line-num">2</span><span class="t-keyword">const</span> <span class="t-val">idea</span> = <span class="t-keyword">new</span> <span class="t-val">synvex.ClientIdea</span>();</code>
-            <code><span class="line-num">3</span></code>
-            <code><span class="line-num">4</span><span class="t-comment">// Transforming dreams into scalable applications</span></code>
-            <code><span class="line-num">5</span><span class="t-val">synvex</span>.<span class="t-keyword">build</span>(<span>idea</span>)</code>
-            <code><span class="line-num">6</span>  .<span class="t-keyword">then</span>((<span>app</span>) => {</code>
-            <code><span class="line-num">7</span>    <span>app</span>.<span class="t-keyword">deploy</span>({</code>
-            <code><span class="line-num">8</span>      <span class="t-attr">performance</span>: <span class="t-val">'100%'</span>,</code>
-            <code><span class="line-num">9</span>      <span class="t-attr">design</span>: <span class="t-val">'Premium & Mobile-First'</span>,</code>
-            <code><span class="line-num">10</span>      <span class="t-attr">scalability</span>: <span class="t-val">'Enterprise'</span></code>
-            <code><span class="line-num">11</span>    });</code>
-            <code><span class="line-num">12</span>  })</code>
-            <code><span class="line-num">13</span>  .<span class="t-keyword">catch</span>((<span>err</span>) => <span class="t-val">console</span>.<span class="t-keyword">error</span>(<span>err</span>));</code>
-          </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="scene-index" aria-hidden="true"><span>01</span> / DIGITAL SYSTEMS</div>
+        <div class="scene-caption" aria-hidden="true">
+          <span class="scene-caption-line"></span>
+          <span>Ideas, engineered<br>to move forward.</span>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -596,7 +576,7 @@
               <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
               <div class="contact-text-box">
                 <h5>Call Support</h5>
-                <p><a href="tel:+919384401306">+91 9384401306</a></p>
+                <p><a href="tel:+919514186277">+91 9514186277</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -677,7 +657,7 @@
   </section>
 
   <!-- Footer Section -->
-  <a href="https://wa.me/919384401306?text=Hello%20Synvex%20Technology%2C%20I%20would%20like%20to%20discuss%20my%20website%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919514186277?text=Hello%20Synvex%20Technology%2C%20I%20would%20like%20to%20discuss%20my%20website%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -746,5 +726,6 @@
 
   <!-- Script Link -->
   <script src="main.js"></script>
+  <script type="module" src="scene.js"></script>
 </body>
 </html>
