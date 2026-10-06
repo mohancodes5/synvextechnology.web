@@ -615,13 +615,13 @@ header:not(.scrolled) {
 .hero-side-image {
   display: block;
   width: 100%;
-  max-width: 540px;
+  max-width: 560px;
   height: auto;
-  border-radius: 28px;
+  border-radius: 0;
   object-fit: contain;
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.14);
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  background: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  border: none;
+  background: transparent;
 }
 
 @keyframes bobCharacter {
