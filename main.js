@@ -217,6 +217,24 @@ const init = () => {
   // =========================================================================
   // 9. Client-side Form Validation (FormSubmit)
   // =========================================================================
+  const heroPanelCard = document.querySelector('.hero-panel-card');
+
+  if (heroPanelCard) {
+    heroPanelCard.addEventListener('pointermove', (event) => {
+      const rect = heroPanelCard.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 12;
+      const rotateX = (0.5 - y) * 12;
+
+      heroPanelCard.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    heroPanelCard.addEventListener('pointerleave', () => {
+      heroPanelCard.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  }
+
   const inquiryForm = document.getElementById('inquiry-form');
   const nameInput = document.getElementById('full-name');
   const emailInput = document.getElementById('email-addr');
